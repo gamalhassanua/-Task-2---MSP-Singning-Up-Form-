@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pyramid Task</title>
+</head>
+<body>
+    <input type="integer" id="input">
+    <button onclick="pyramid(document.getElementById('input').value)">submit</button>
+</body>
+
+<script>
+
+function pyramid(h)
+{
+         var out = "";
+         if(h > 0 && h < 10)
+    {
+         document.write("<br>height : " + h + "<br><br>");
+         for(var i = 0; i < h; i++)
+            {
+         for(var j = h - i - 1; j > 0; j--)
+         {
+            out += "\xa0" + "\xa0";
+         }
+         for(var k = 0; k <= i; k++)
+         {
+		 out+="#";
+		 }
+         document.write(out);
+		 document.write("<br>");
+		 out = "";
+			}
+	}
+			else{
+				alert("Wrong input, Please re-enter the height.");
+			}
+}	    
+</script>
+</html>
